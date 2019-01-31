@@ -17,6 +17,10 @@ class Statter():
 
     def sum(self):
         return sum([float(i.split(",")[2]) for i in self.data[:-1]])
+
     def avg(self):
         times = [float(i.split(",")[2]) for i in self.data[:-1]]
         return sum(times) / len(times)
+        
+    def count(self):
+        return len(self.data)
