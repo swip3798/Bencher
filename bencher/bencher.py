@@ -3,7 +3,7 @@ import platform
 import os
 import time
 
-__version__ = "0.5.0"
+__version__ = "0.5.1"
 
 class Bencher():
     def __init__(self, suite_name):
@@ -43,7 +43,7 @@ class Bencher():
             return "[Finished in " + str(time.time() - self.start_time) + "s]"
     def save(self):
         if not self.is_running and self.get_time() != 0:
-            savestr = __version__ + "," + str(self.start_time) + "," + str(self.get_time()) + "\n"
+            savestr = __version__ + "," + str(int(self.start_time)) + "," + str(self.get_time()) + "\n"
             open(self.filename, "a").write(savestr)
 
     def reset(self):
