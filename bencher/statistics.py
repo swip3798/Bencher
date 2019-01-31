@@ -15,9 +15,10 @@ class Statter():
         self.file = open(self.filename, "r")
 
     def sum(self):
-        data = self.file.read().split("\n")            
-        return sum([i.split(",")[2] for i in data])
+        data = self.file.read().split("\n")
+        print(len(data))
+        return sum([float(i.split(",")[2]) for i in data[:-1]])
     def avg(self):
         data = self.file.read().split("\n")
-        times = [i.split(",")[2] for i in data]
+        times = [float(i.split(",")[2]) for i in data[:-1]]
         return sum(times) / len(times)
