@@ -43,7 +43,7 @@ class Bencher():
             return "[Finished in " + str(time.time() - self.start_time) + "s]"
     def save(self):
         if not self.is_running and self.get_time() != 0:
-            savestr = __version__ + "," + self.start_time + "," + str(self.get_time()) + "\n"
+            savestr = __version__ + "," + str(self.start_time) + "," + str(self.get_time()) + "\n"
             open(self.filename, "a").write(savestr)
     
 
