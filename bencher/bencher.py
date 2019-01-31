@@ -3,7 +3,7 @@ import platform
 import os
 import time
 
-__version__ = "0.5.3"
+__version__ = "0.6.0"
 
 class Bencher():
     def __init__(self, suite_name):

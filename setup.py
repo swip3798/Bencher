@@ -1,7 +1,7 @@
 from distutils.core import setup
 
 setup(name='Bencher',
-      version='0.5.3',
+      version='0.6.0',
       description='Benchmarking Suite',
       author='Christian Schweigel',
       author_email='',
