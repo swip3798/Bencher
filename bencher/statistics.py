@@ -12,13 +12,11 @@ class Statter():
         else:
             self.location += "\\.bencher\\"
         self.filename = self.location + suite_name + ".bench"
-        self.file = open(self.filename, "r")
+        file = open(self.filename, "r")
+        self.data = file.read().split("\n")
 
     def sum(self):
-        data = self.file.read().split("\n")
-        print(len(data))
-        return sum([float(i.split(",")[2]) for i in data[:-1]])
+        return sum([float(i.split(",")[2]) for i in self.data[:-1]])
     def avg(self):
-        data = self.file.read().split("\n")
-        times = [float(i.split(",")[2]) for i in data[:-1]]
+        times = [float(i.split(",")[2]) for i in self.data[:-1]]
         return sum(times) / len(times)
