@@ -7,6 +7,7 @@ import time
 class Bencher():
     def __init__(self, suite_name):
         self.start_time = 0
+        self.stop_time = 0
         self.is_running = False
         self.location = str(Path.home())
         if platform.system() == "Linux":
@@ -40,8 +41,8 @@ class Bencher():
         else:
             return "[Finished in " + str(time.time() - self.start_time) + "s]"
     def save(self):
-        if not self.is_running and self.stop_time != 0:
-            open(self.filename, "a").write(str(self.stop_time) + "\n")
+        if not self.is_running and self.get_time() != 0:
+            open(self.filename, "a").write(str(self.get_time()) + "\n")
     
 
 
