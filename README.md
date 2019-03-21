@@ -3,7 +3,7 @@ Benchmarking system for python 3
 
 ## Description
 This is a little Benchmarking module for Python 3. It provides a easy to use Benchmarking class and a statistics class for further analysis.
-It can save the measured benchmarks into a centralized folder in the home directory. This works crossplatform, I currently tested it on Windows and Debian, but it should work on most linux distributions and on OSX as well.
+It can save the measured benchmarks into a centralized folder in the home/user directory. This works crossplatform, I currently tested it on Windows and Debian, but it should work on most linux distributions and on OSX as well.
 
 ## Install
 
